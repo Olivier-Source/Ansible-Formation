@@ -1,0 +1,6 @@
+# Les serveurs DNS utilisent eux-mêmes comme résolveur
+dns_servers:
+  - 127.0.0.1
+
+# Variable utilisée par le rôle ansible_dns
+dns_carp_ip: 10.0.0.53

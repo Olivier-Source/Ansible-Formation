@@ -1,0 +1,68 @@
+all:
+  children:
+
+    # --- Par rôle générique ---
+    loadbalancers:
+      children:
+        loadbalancers_frontaux:
+          hosts:
+            flb01:
+            flb02:
+        loadbalancers_dorsaux:
+          hosts:
+            blb01:
+            blb02:
+
+    webservers:
+      children:
+        web_applicatifs:
+          hosts:
+            fweb01:
+            fweb02:
+            fweb03:
+            fweb04:
+            fweb05:
+        web_metiers:
+          hosts:
+            bweb01:
+            bweb02:
+            bweb03:
+
+    databases:
+      hosts:
+        db01:
+        db02:
+        db03:
+
+    dns:
+      hosts:
+        dns01:
+        dns02:
+
+    # --- Par distribution ---
+    linux:
+      children:
+        redhat:
+          hosts:
+            flb01:
+            flb02:
+            blb01:
+            blb02:
+        debian:
+          hosts:
+            bweb01:
+            bweb02:
+            bweb03:
+            db01:
+            db02:
+            db03:
+
+    openbsd:
+      hosts:
+        fweb01:
+        fweb02:
+        fweb03:
+        fweb04:
+        fweb05:
+        dns01:
+        dns02: 

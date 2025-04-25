@@ -1,0 +1,2 @@
+# Adresse IP virtuelle VRRP pour les LB frontaux
+lb_vrrp_ip: 10.0.0.1

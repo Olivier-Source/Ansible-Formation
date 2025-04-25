@@ -1,0 +1,2 @@
+# On configure les DNS pour l'ensemble de l'infrastructure
+dns_servers: 10.0.0.53

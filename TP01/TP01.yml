@@ -1,0 +1,8 @@
+---
+- name: Affiche les 5 premières lettres du nom d’hôte
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Affiche les 5 premières lettres de l'hôte
+      debug:
+        msg: "Host raccourci : {{ inventory_hostname[:5] }}"

@@ -1,0 +1,2 @@
+# Adresse IP virtuelle VRRP pour les LB dorsaux
+lb_vrrp_ip: 10.0.1.1

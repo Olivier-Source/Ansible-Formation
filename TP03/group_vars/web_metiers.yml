@@ -1,0 +1,5 @@
+# IPs des bases de données utilisées pour lecture et écriture
+db_rw_endpoint: 10.0.2.101   # IP maître pour écriture
+db_ro_endpoints: # IP's pour lecture
+  - 10.0.2.102
+  - 10.0.2.103
