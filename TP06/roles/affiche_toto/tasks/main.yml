@@ -1,0 +1,11 @@
+---
+- name: Affiche la variable toto
+  debug:
+    msg: "Valeur de toto : {{ toto }}"
+
+- name: Bonjour avec tags
+  debug:
+    msg: "Bonjour"
+  tags:
+    - bonjour
+    - never

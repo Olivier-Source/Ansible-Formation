@@ -1,0 +1,10 @@
+---
+- name: Appel via import_role
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Importation statique du rôle
+      import_role:
+        name: affiche_toto
+      vars:
+        toto: "Appel avec import_role"

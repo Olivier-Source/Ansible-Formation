@@ -1,0 +1,4 @@
+- name: Affiche la valeur de Toto
+
+  debug:
+    msg: "La valeur de Toto : {{ toto }}"

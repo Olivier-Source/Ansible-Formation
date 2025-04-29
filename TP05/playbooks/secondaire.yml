@@ -1,0 +1,4 @@
+- name: Affiche un message au choix
+
+  debug:
+    msg: "Ansible c'est chouette !"

@@ -1,0 +1,20 @@
+- name: Principal
+  hosts: localhost
+  gather_facts: false
+
+  vars_files:
+    - ../vars/reutilisation_variables.yml
+
+  tasks:
+    - name: Importation du playbook secondaire
+      import_tasks: secondaire.yml
+
+    - name: Importation du playbook affiche
+      import_tasks: ../tasks/affiche.yml
+
+    - name: Inclusion des taches de affiche
+      include_tasks: ../tasks/affiche.yml
+
+    - name: Affiche de la valeur de toto en local
+      debug:
+        msg: "La valeur de Toto local : {{ toto }}"

@@ -1,0 +1,10 @@
+---
+- name: Appel via include_role
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Inclusion dynamique du rôle
+      include_role:
+        name: affiche_toto
+      vars:
+        toto: "Appel avec include_role"

@@ -1,0 +1,8 @@
+---
+- name: Appel via la clause roles
+  hosts: localhost
+  gather_facts: false
+  vars:
+    toto: "Appel avec roles:"
+  roles:
+    - affiche_toto

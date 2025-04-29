@@ -1,0 +1,17 @@
+- name: Boucle
+  hosts: localhost
+  gather_facts: false
+
+  vars_files:
+    - ../vars/reutilisation_variables.yml
+
+  tasks:
+    - name: Boucle sur affiche
+      include_tasks: ../tasks/affiche.yml
+      loop:
+        - "One"
+        - "Two"
+        - "Three"
+        - "Viva l'algerie"
+      loop_control:
+        loop_var: toto

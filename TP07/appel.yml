@@ -1,0 +1,11 @@
+---
+- name: Vérification de l'existance d'un paquet sur le serveur
+  hosts: localhost
+  gather_facts: true
+
+  vars:
+    filtre: "python"  # Exemple 1
+    type_filtre: "basique"
+
+  roles:
+    - filtre_paquets
